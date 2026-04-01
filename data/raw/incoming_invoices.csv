@@ -1,0 +1,7 @@
+invoice_id,supplier_name,purchase_order,invoice_amount,po_amount,currency,due_in_days,ocr_confidence,has_required_fields,duplicate_invoice,cost_center_valid,payment_terms_valid
+INV-1001,Alfa Office Supplies,PO-9001,480.0,480.0,BRL,12,0.98,1,0,1,1
+INV-1002,Beta Logistics,PO-9002,3210.0,3180.0,BRL,5,0.93,1,0,1,1
+INV-1003,Gamma Telecom,PO-9003,890.0,890.0,BRL,20,0.62,1,0,1,1
+INV-1004,Delta Services,PO-9004,1440.0,1440.0,BRL,7,0.95,0,0,1,1
+INV-1005,Beta Logistics,PO-9002,3180.0,3180.0,BRL,6,0.97,1,1,1,1
+INV-1006,Omega Consulting,PO-9006,5100.0,5100.0,BRL,3,0.96,1,0,0,1

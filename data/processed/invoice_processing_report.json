@@ -1,0 +1,11 @@
+{
+  "runtime_mode": "uipath_style_local_simulation",
+  "invoice_count": 6,
+  "auto_approved": 1,
+  "manual_review_queue": 4,
+  "blocked": 1,
+  "average_ocr_confidence": 0.9017,
+  "decision_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/output/invoice_decisions.csv",
+  "report_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/data/processed/invoice_processing_report.json",
+  "workflow_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/workflows/Main.xaml"
+}
