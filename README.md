@@ -4,14 +4,6 @@
 
 `invoice-processing-uipath` é um MVP técnico de automação de contas a pagar com mentalidade `UiPath`, desenhado para mostrar como um processo de recebimento de notas pode ser estruturado com OCR, validação de regras, fila de exceções e trilha de auditoria.
 
-### Storytelling técnico
-
-Em RPA, automatizar não é só clicar em telas. Em um processo de invoice processing, a automação precisa ler documentos, interpretar campos extraídos, comparar com dados de referência, separar exceções e registrar evidências suficientes para auditoria. É esse tipo de fluxo que o `UiPath` organiza muito bem em operações corporativas.
-
-Este projeto representa esse desenho com dois elementos complementares:
-
-- um artefato `UiPath-style` com [project.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/project.json) e [Main.xaml](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/workflows/Main.xaml);
-- um simulador local em Python que reproduz a lógica operacional do processo e gera resultados reproduzíveis para portfólio.
 
 ### Objetivo arquitetural
 
@@ -40,26 +32,26 @@ flowchart LR
 
 ### Estrutura do projeto
 
-- [project.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/project.json)
-- [workflows/Main.xaml](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/workflows/Main.xaml)
-- [src/sample_data.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/src/sample_data.py)
-- [src/pipeline.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/src/pipeline.py)
-- [main.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/main.py)
-- [tests/test_pipeline.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/tests/test_pipeline.py)
+- [project.json](project.json)
+- [workflows/Main.xaml](workflows/Main.xaml)
+- [src/sample_data.py](src/sample_data.py)
+- [src/pipeline.py](src/pipeline.py)
+- [main.py](main.py)
+- [tests/test_pipeline.py](tests/test_pipeline.py)
 
 ### Papel técnico de cada arquivo
 
-- [project.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/project.json)
+- [project.json](project.json)
   define o projeto `UiPath-style`, a workflow principal e as dependências esperadas do ecossistema.
-- [Main.xaml](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/workflows/Main.xaml)
+- [Main.xaml](workflows/Main.xaml)
   representa a sequência de alto nível do processo automatizado.
-- [sample_data.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/src/sample_data.py)
+- [sample_data.py](src/sample_data.py)
   materializa um lote sintético reproduzível de invoices, incluindo casos limpos e casos com exceção operacional.
-- [pipeline.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/src/pipeline.py)
+- [pipeline.py](src/pipeline.py)
   concentra a lógica de classificação do documento, decisão operacional e persistência dos artefatos.
-- [main.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/main.py)
+- [main.py](main.py)
   executa o fluxo completo e imprime o sumário consolidado.
-- [test_pipeline.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/tests/test_pipeline.py)
+- [test_pipeline.py](tests/test_pipeline.py)
   valida o contrato principal do pipeline.
 
 ### Lógica de negócio simulada
@@ -107,11 +99,11 @@ Isso reforça uma característica importante de RPA bem desenhado: o objetivo n�
 ### Artefatos gerados
 
 - dataset de entrada:
-  [data/raw/incoming_invoices.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/data/raw/incoming_invoices.csv)
+  [data/raw/incoming_invoices.csv](data/raw/incoming_invoices.csv)
 - decisões do processo:
-  [output/invoice_decisions.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/output/invoice_decisions.csv)
+  [output/invoice_decisions.csv](output/invoice_decisions.csv)
 - relatório consolidado:
-  [data/processed/invoice_processing_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/data/processed/invoice_processing_report.json)
+  [data/processed/invoice_processing_report.json](data/processed/invoice_processing_report.json)
 
 ### Contrato do relatório final
 
@@ -158,7 +150,7 @@ python3 -m py_compile main.py src/sample_data.py src/pipeline.py
 
 The repository combines:
 
-- a `UiPath-style` project definition through [project.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/project.json) and [Main.xaml](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/workflows/Main.xaml);
+- a `UiPath-style` project definition through [project.json](project.json) and [Main.xaml](workflows/Main.xaml);
 - a deterministic local simulator that reproduces the operational decision logic for portfolio validation.
 
 ### Architectural intent
@@ -196,9 +188,9 @@ The decision layer produces both a final `status` and an explicit list of `reaso
 
 ### Generated artifacts
 
-- [data/raw/incoming_invoices.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/data/raw/incoming_invoices.csv)
-- [output/invoice_decisions.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/output/invoice_decisions.csv)
-- [data/processed/invoice_processing_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/invoice-processing-uipath/data/processed/invoice_processing_report.json)
+- [data/raw/incoming_invoices.csv](data/raw/incoming_invoices.csv)
+- [output/invoice_decisions.csv](output/invoice_decisions.csv)
+- [data/processed/invoice_processing_report.json](data/processed/invoice_processing_report.json)
 
 ### Runtime note
 
